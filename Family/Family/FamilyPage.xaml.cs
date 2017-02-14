@@ -14,6 +14,9 @@ namespace Family
         public FamilyPage()
         {
             InitializeComponent();
+            // set the background color to gold
+            this.BackgroundColor = Color.FromRgb(255, 215, 0);
+
             var layout = new StackLayout { Padding = new Thickness(20, 20, 20, 20) };
 
             //Greeting//
@@ -22,7 +25,7 @@ namespace Family
             greeting.Spans.Add(new Span { Text = "Greetings from the Mauer Family!", FontAttributes = FontAttributes.Bold, FontSize = 32 });
             label.FormattedText = greeting;
             label.HorizontalTextAlignment = TextAlignment.Center;
-            label.TextColor = Color.Blue;
+            label.TextColor = Color.FromRgb(165, 42, 42); ;
             layout.Children.Add(label);
 
 
@@ -31,9 +34,11 @@ namespace Family
             var s = new FormattedString();
             s.Spans.Add(new Span { Text = "The dad's name is ", FontAttributes = FontAttributes.Bold, FontSize = 18 });
             s.Spans.Add(new Span { Text = "Clifford Mauer", FontAttributes = FontAttributes.Bold, FontSize = 24 });
-            s.Spans.Add(new Span { Text = ".", FontAttributes = FontAttributes.Bold, FontSize = 18 });
+            s.Spans.Add(new Span { Text = ".  I make my living programming computers.", FontAttributes = FontAttributes.Bold, FontSize = 18 });
             labelGrandfather.FormattedText = s;
-            labelGrandfather.TextColor = Color.Red;
+            labelGrandfather.TextColor = Color.FromRgb(125, 189, 124); ;
+            labelGrandfather.BackgroundColor = Color.Blue;
+            labelGrandfather.VerticalOptions = LayoutOptions.StartAndExpand;
             layout.Children.Add(labelGrandfather);
 
 
@@ -41,9 +46,9 @@ namespace Family
             var t = new FormattedString();
             t.Spans.Add(new Span { Text = "The mom's name is ", FontAttributes = FontAttributes.Bold, FontSize = 18 });
             t.Spans.Add(new Span { Text = "Sally Mauer", FontAttributes = FontAttributes.Bold, FontSize = 24 });
-            t.Spans.Add(new Span { Text = ".", FontAttributes = FontAttributes.Bold, FontSize = 18 });
+            t.Spans.Add(new Span { Text = ".  Sally is a Minneapolis School bus driver.", FontAttributes = FontAttributes.Bold, FontSize = 18 });
             labelGrandmother.FormattedText = t;
-            labelGrandmother.TextColor = Color.Red;
+            labelGrandmother.TextColor = Color.FromRgb(30, 144, 255);
             layout.Children.Add(labelGrandmother);
 
 
@@ -53,7 +58,7 @@ namespace Family
             ChildrenIntro.Spans.Add(new Span { Text = "We have two daughters.", FontAttributes = FontAttributes.Bold, FontSize = 18 });
             labelChildren.FormattedText = ChildrenIntro;
             labelChildren.HorizontalTextAlignment = TextAlignment.Center;
-            labelChildren.TextColor = Color.Red;
+            labelChildren.TextColor = Color.FromRgb(199, 21, 133);
             layout.Children.Add(labelChildren);
 
             //Carrie//
@@ -63,9 +68,9 @@ namespace Family
             x.Spans.Add(new Span { Text = "Carrie ", FontAttributes = FontAttributes.Bold, FontSize = 22 });
             x.Spans.Add(new Span { Text = ". "+Environment.NewLine+"She is married to ", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             x.Spans.Add(new Span { Text = "Steve Kioski", FontAttributes = FontAttributes.Bold, FontSize = 22 });
-            x.Spans.Add(new Span { Text = ".", FontAttributes = FontAttributes.Bold, FontSize = 16 });
+            x.Spans.Add(new Span { Text = ".  Carrie is a social worker for Hennepin County and Steve works for a software company.", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             labelCarrie.FormattedText = x;
-            labelCarrie.TextColor = Color.Green;
+            labelCarrie.TextColor = Color.FromRgb(75, 99, 29);
             layout.Children.Add(labelCarrie);
 
             //Sarah//
@@ -75,9 +80,9 @@ namespace Family
             y.Spans.Add(new Span { Text = "Sarah ", FontAttributes = FontAttributes.Bold, FontSize = 22 });
             y.Spans.Add(new Span { Text = "."+Environment.NewLine+"She is married to ", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             y.Spans.Add(new Span { Text = "Nicholas Rohlstad", FontAttributes = FontAttributes.Bold, FontSize = 22 });
-            y.Spans.Add(new Span { Text = ".", FontAttributes = FontAttributes.Bold, FontSize = 16 });
+            y.Spans.Add(new Span { Text = ".  Sarah runs a business that fixes digital televisions and Nick is a technician for Ricoh copiers.", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             labelSarah.FormattedText = y;
-            labelSarah.TextColor = Color.Green;
+            labelSarah.TextColor = Color.FromRgb(255, 100, 0);
             layout.Children.Add(labelSarah);
 
             //Grandchildren//
@@ -86,7 +91,7 @@ namespace Family
             GrandChildrenIntro.Spans.Add(new Span { Text = "We have three grandchildren.", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             labelGrandChildren.FormattedText = GrandChildrenIntro;
             labelGrandChildren.HorizontalTextAlignment = TextAlignment.Center;
-            labelGrandChildren.TextColor = Color.Purple;
+            labelGrandChildren.TextColor = Color.FromRgb(122, 45, 15);
             layout.Children.Add(labelGrandChildren);
 
             //Gavin//
@@ -98,12 +103,13 @@ namespace Family
             a.Spans.Add(new Span { Text = "Sarah ", FontAttributes = FontAttributes.Bold, FontSize = 22 });
             a.Spans.Add(new Span { Text = "and ", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             a.Spans.Add(new Span { Text = "Nicholas", FontAttributes = FontAttributes.Bold, FontSize = 22 });
-            a.Spans.Add(new Span { Text = ".", FontAttributes = FontAttributes.Bold, FontSize = 16 });
+            a.Spans.Add(new Span { Text = ".  Gavin enjoys playing video games and building Lego sets.", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             labelGavin.FormattedText = a;
-            labelGavin.TextColor = Color.Purple;
+            labelGavin.TextColor = Color.FromRgb(75, 33, 56);
+            layout.Children.Add(labelGrandChildren);
             layout.Children.Add(labelGavin);
 
-            //Gavin//
+            //Morgan//
             var labelMorgan = new Label();
             var b = new FormattedString();
             b.Spans.Add(new Span { Text = "The next oldest grandchild is ", FontAttributes = FontAttributes.Bold, FontSize = 16 });
@@ -112,9 +118,9 @@ namespace Family
             b.Spans.Add(new Span { Text = "Sarah ", FontAttributes = FontAttributes.Bold, FontSize = 22 });
             b.Spans.Add(new Span { Text = "and ", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             b.Spans.Add(new Span { Text = "Nicholas", FontAttributes = FontAttributes.Bold, FontSize = 22 });
-            b.Spans.Add(new Span { Text = ".", FontAttributes = FontAttributes.Bold, FontSize = 16 });
+            b.Spans.Add(new Span { Text = ".  Morgan likes to dance and sing and loves playing with her dog Daisy.", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             labelMorgan.FormattedText = b;
-            labelMorgan.TextColor = Color.Purple;
+            labelMorgan.TextColor = Color.FromRgb(52, 128, 136);
             layout.Children.Add(labelMorgan);
 
             //Bennett//
@@ -126,28 +132,37 @@ namespace Family
             c.Spans.Add(new Span { Text = "Carrie ", FontAttributes = FontAttributes.Bold, FontSize = 22 });
             c.Spans.Add(new Span { Text = "and ", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             c.Spans.Add(new Span { Text = "Steve", FontAttributes = FontAttributes.Bold, FontSize = 22 });
-            c.Spans.Add(new Span { Text = ".", FontAttributes = FontAttributes.Bold, FontSize = 16 });
+            c.Spans.Add(new Span { Text = ".  Ben loves to play with his letters and he likes bossing his pet vacuum cleaner to stay off of the living room curtains.", FontAttributes = FontAttributes.Bold, FontSize = 16 });
             labelBennett.FormattedText = c;
-            labelBennett.TextColor = Color.Purple;
+            labelBennett.TextColor = Color.FromRgb(99, 144, 86);
+            labelBennett.VerticalOptions = LayoutOptions.StartAndExpand;
             layout.Children.Add(labelBennett);
 
             Title = "Family";
-            Content = new StackLayout
+
+            Content = new ScrollView()
             {
-               Spacing = 1,
-               Padding = new Thickness(20, 20, 20, 20),
-                Children =
-                { label,
-                  labelGrandfather,
-                  labelGrandmother,
-                  labelChildren,
-                  labelCarrie,
-                  labelSarah,
-                  labelGrandChildren,
-                  labelGavin,
-                  labelMorgan,
-                  labelBennett}
+                Content = layout,
+                VerticalOptions = LayoutOptions.FillAndExpand,
             };
+
+
+            //var stack = new StackLayout();
+            //{
+            //    stack.Spacing = 1;
+            //    stack.Padding = new Thickness(20, 20, 20, 20);
+            //    stack.Children.Add(label);
+            //    stack.Children.Add(labelGrandfather);
+            //    stack.Children.Add(labelGrandmother);
+            //    stack.Children.Add(labelChildren);
+            //    stack.Children.Add(labelCarrie);
+            //    stack.Children.Add(labelSarah);
+            //    stack.Children.Add(labelGrandChildren);
+            //    stack.Children.Add(labelGavin);
+            //    stack.Children.Add(labelMorgan);
+            //    stack.Children.Add(labelBennett);
+
+            //};
         }
     }
 }
